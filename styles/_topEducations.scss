@@ -1,0 +1,53 @@
+@import "./_variables";
+@import "./_global";
+#top-educations {
+  .center-text {
+    text-align: center;
+    h2 {
+      font-size: $h2-font;
+      font-weight: 800;
+    }
+    button {
+      margin-top: 4rem;
+    }
+  }
+  .top-educations-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    gap: 3rem;
+    margin-top: 5rem;
+    .box {
+      position: relative;
+      img {
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+        filter: brightness(70%); /* resmin parlaklığını düşürdük*/
+        @extend .transition;
+        &:hover {
+          scale: 1.05;
+          cursor: pointer;
+        }
+      }
+      .box-bottom {
+        position: absolute;
+        bottom: 40px;
+        left: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        h3,
+        h4,
+        h5 {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          font-size: 18px;
+          i {
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}

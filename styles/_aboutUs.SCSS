@@ -1,0 +1,40 @@
+@import "./_variables";
+#about-us {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9rem;
+  align-items: center;
+  .about-us-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .about-us-text {
+    h5 {
+      color: $main-color;
+      text-transform: uppercase;
+      font-size: 22px;
+      letter-spacing: 6px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: $h2-font;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 25px;
+    }
+    p {
+      font-size: $p-font;
+      font-weight: 500;
+      color: $gray;
+      margin-bottom: 35px;
+      line-height: 30px;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  #about-us {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,39 @@
+@import "./_variables";
+@import "./_global";
+
+#educations {
+  .educations-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+    .row {
+      .row-img {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        img {
+          width: 100%;
+          display: block;
+          @extend .transition;
+          &:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+          }
+        }
+      }
+      h4 {
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+  }
+}

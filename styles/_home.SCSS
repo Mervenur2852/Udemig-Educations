@@ -1,0 +1,71 @@
+@import "./_variables";
+@import "./_global";
+#home {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../ımages/group.jpeg);
+  height: 100vh;
+  background-size: cover; /*resmi ekrana sığdırdım*/
+  background-position: bottom center;
+  .home-text {
+    margin-top: 200px;
+    h5 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 6px; /* harfler arasını ayırdım*/
+      color: $main-color;
+    }
+    h1 {
+      font-size: $h1-font;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: $p-font;
+      font-weight: 500;
+      color: $gray;
+      margin-bottom: 35px;
+    }
+  }
+}
+@media (max-width: 1300px) {
+  .home-text {
+    margin-top: unset; //tanımlanan margin-top değeri media etiketi kullanırkne
+    // yapmaya çalıştığımız ortalama özelliğinde işimizi bozdu bizde bu noktada margin değerini
+    //unset ile iptal ettik
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h5 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 6px; /* harfler arasını ayırdım*/
+
+      color: $main-color;
+    }
+    h1 {
+      font-size: 80px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: $p-font;
+      font-weight: 500;
+      color: $gray;
+      margin-bottom: 35px;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .home-text {
+    h1 {
+      font-size: 60px  !important;
+    }
+  }
+}

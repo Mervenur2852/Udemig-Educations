@@ -1,0 +1,51 @@
+// google fonts
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+//scss imports
+
+@import "./_variables";
+@import "./_header";
+@import "./_home";
+@import "./_global";
+@import "./_educations";
+@import "./_aboutUs";
+@import "./topEducations";
+@import "./contactUs";
+@import "./footer";
+//css reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  outline: none;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: $bg-color;
+  color: $text-color;
+}
+a {
+  color: white;
+}
+section {
+  padding: 70px 17% 60px;
+}
+.btn {
+  padding: 13px 40px;
+  display: inline-block;
+  background-color: $main-color;
+  color: $bg-color;
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  @extend .transition;
+  &:hover {
+    border: 2px solid white;
+    background-color: transparent;
+    color: $text-color;
+    transform: translateX(10px);
+  }
+}
